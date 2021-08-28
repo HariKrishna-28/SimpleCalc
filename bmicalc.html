@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+
+    <!-- <style>
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+    </style> -->
+</head>
+
+<body style="text-align: center; background-color: #161b22;">
+    <div style="margin-top: 10%; ">
+
+        <h1 class="text-3xl text-white font-medium my-10">BMI Calculator</h1>
+
+        <form action="/bmicalculator" method="POST">
+            <div class="grid grid-row-1 gap-2">
+
+                <label class="block text-white text-sm font-bold mb-2 flex flex-col" for="username">Height
+                    <input type="text" name="Height" placeholder="Height" style="margin: 0 10%;"
+                        class="bg-gray-800 mt-2 w-100 shadow appearance-none rounded py-2 px-3  leading-tight focus:outline-none  focus:shadow-outline">
+                </label>
+
+                <label class="block text-white flex flex-col text-sm font-bold mb-2" for="username">Weight
+                    <input type=" text" name="Weight" placeholder="Weight" style="margin: 0 10%;"
+                        class=" bg-gray-800 w-100 mt-2 shadow appearance-none rounded py-2 px-3 leading-tight focus:outline-none focus:shadow-outline ">
+                </label>
+            </div>
+            <!-- <div class=" flex justify-center items-center"> -->
+            <button type="submit" name="submit"
+                class="bg-green-500 mt-8 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Calculate BMI
+            </button>
+            <!-- </div> -->
+        </form>
+    </div>
+</body>
+
+</html>
