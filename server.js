@@ -34,18 +34,18 @@ app.get("/bmicalculator", (req, res) => {
 app.post("/bmicalculator", (req, res) => {
     var height = parseInt(req.body.Height)
     var weight = parseInt(req.body.Weight)
+    var bmi = Math.round(height / (height * height), 2)
     res.send(`Your BMI is ${height + weight}`)
 
 })
 
-//  heroku config
-app.use(express.static(path.join(__dirname)));
+// //  heroku config
+// app.use(express.static(path.join(__dirname)));
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'index.html'));
+// });
 
-
-app.listen(3000 || process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log("server running at port 3000!")
 })
